@@ -1,0 +1,15 @@
+name: sqlalchemy-demo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9  
+  - sqlalchemy
+  - ipython
+  - numpy  
+  - pandas 
+  - flask 
+  - pytest  
+  - jupyter  
+  - loguru
+
