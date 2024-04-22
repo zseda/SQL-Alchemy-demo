@@ -1,3 +1,8 @@
+"""
+credits from: https://github.com/ArjanCodes/
+
+"""
+
 import sqlalchemy as sa
 from sqlalchemy.orm import Mapped, mapped_column, sessionmaker, declarative_base
 from loguru import logger
@@ -30,9 +35,11 @@ def main() -> None:
     Base.metadata.create_all(db)
     # create instance of the user class
     user = User(username="zeynep", email="zeynep.birinci@hitec-hamburg.de")
+    second_user = User(username="hitec-user", email="hitec-user@hitec-hamburg.de")
     # session to interact with the db
     with Session() as session:
         session.add(user)
+        session.add(second_user)
         session.commit()
         logger.info((session.query(User).all()))
 
